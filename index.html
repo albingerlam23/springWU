@@ -5,21 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Göteborgs Gokartcenter AB</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="grid1">
 
-  <nav>
-    <h1>Göteborgs Gokartcenter</h1>
-    <div class="hamburger" id="hamburger">&#9776;</div>
-    <div class="nav-links" id="nav-links">
-      <a href="#">Hem</a>
-      <a href="#">Banor</a>
-      <a href="#">Tjänster</a>
-      <a href="#">Boka</a>
-    </div>
+ <nav>
+  <h1>Göteborgs Gokartcenter</h1>
+
+  <button 
+    class="hamburger" 
+    id="hamburger"
+    aria-label="Öppna meny"
+    aria-expanded="false"
+    aria-controls="nav-links">
+    &#9776;
+  </button>
+
+  <nav class="nav-links" id="nav-links" hidden>
+    <a href="#">Hem</a>
+    <a href="#">Banor</a>
+    <a href="#">Tjänster</a>
+    <a href="#">Boka</a>
   </nav>
+
+</nav>
 
   <header>
     <h1>Upplev fart och spänning!</h1>
@@ -32,24 +48,31 @@
   </main>
 
   <aside id="as1">
-    <img src="img/MBJ_1437-Foto-Marcus-Bjarneroth-scaled.jpg" alt="Gokart på banan">
-  </aside>
+  <p class="aside-text">Vi har en utomhusbana...</p>
+  <img src="img/MBJ_1437-Foto-Marcus-Bjarneroth-scaled.jpg" alt="Gokart på banan">
+</aside>
 
-  <aside id="as2">
-    <img src="img/412e063b445e3b7545e087cc300205d4.jpg" alt="Gokart racing">
-  </aside>
+<aside id="as2">
+  <p class="aside-text">Men också en inomhusbana!</p>
+  <img src="img/412e063b445e3b7545e087cc300205d4.jpg" alt="Gokart racing">
+</aside>
 
   <section class="sc">
-    <h2>Om oss</h2>
-    <p>Vi erbjuder gokartupplevelser för både nybörjare och erfarna förare. Säkerhet, spänning och roliga minnen är alltid i fokus.</p>
-  </section>
+  <h2>Om oss</h2>
+  <p>
+    Vi erbjuder gokartupplevelser för både nybörjare och erfarna förare.
+    Säkerhet, spänning och roliga minnen är alltid i fokus.
+  </p>
+
+  <img src="img/gokart_ps.png" alt="Gokartbana i Göteborg">
+</section>
 
   <footer>
     <h2>Följ oss på sociala medier!</h2>
     <div class="social-links">
-      <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="img/facebook-logo.png" alt="Facebook"></a>
       <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="img/tiktok.png" alt="TikTok"></a>
+      <a href="#"><img src="img/twitter.png" alt="X"></a>
     </div>
   </footer>
 

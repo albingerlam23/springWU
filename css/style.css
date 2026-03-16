@@ -113,7 +113,7 @@ header p {
 
 /* MAIN */
 
-main {
+.main1 {
     grid-area: mn;
     position: relative;
     border-radius: 20px;
@@ -125,7 +125,7 @@ main {
     background-position: center;
 }
 
-main::before {
+.main1::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -135,38 +135,41 @@ main::before {
     filter: brightness(0.45);
 }
 
-main h2 {
+.main1 h2 {
     font-size: 1.8rem;
 }
 
-main p {
+.main1 p {
     font-size: 1rem;
     max-width: 500px;
     margin: auto;
 }
 
-main h2, main p {
+.main1 h2, .main1 p {
     position: relative;
     z-index: 2;
 }
 
 /* ASIDES */
 
-aside {
+#as1.aside1,
+#as2.aside2 {
     border-radius: 20px;
     overflow: hidden;
+    text-align: center;
 }
 
-#as1 img, #as2 img {
+#as1.aside1 img,
+#as2.aside2 img {
     width: 100%;
-    height: auto; 
-    object-fit: cover; 
+    height: auto;
+    object-fit: cover;
     display: block;
 }
 
 /* SECTION */
 
-section.sc {
+.sc1 {
     grid-area: sc;
     background: #1e293b;
     padding: 30px;
@@ -177,22 +180,20 @@ section.sc {
     gap: 20px;
 }
 
-section.sc img {
+.sc1 img {
     width: 100%;
     border-radius: 12px;
     object-fit: cover;
 }
 
-section h2 {
+.sc1 h2 {
     font-size: 1.6rem;
 }
 
-section p {
+.sc1 p {
     font-size: 1rem;
     max-width: 600px;
 }
-
-/* FOOTER */
 
 /* FOOTER */
 
@@ -200,19 +201,35 @@ footer {
     grid-area: ft;
     background: #1f9767;
     border-radius: 5px;
-    text-align: center;
-    padding: 20px 15px;
+    padding: 20px 30px;
 
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center; 
-    gap: 12px;
 }
 
-footer h2 {
-    font-size: 1.2rem;
+.footer-left,
+.footer-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-right {
+    text-align: right;
+}
+.footer-right h2 {
+    font-size: 1.0rem;
     margin: 0;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.footer-right p {
+    font-size: 0.7rem;
+}
+
+.footer-left h2 {
+    font-size: 1.0rem;
 }
 
 .social-links {
@@ -356,5 +373,88 @@ footer h2 {
 
     .social-links img {
         width: 34px;
+    }
+}
+
+
+
+.grid2 {
+    display: grid;
+    gap: 12px;
+    padding: 12px;
+    min-height: 100vh;
+    grid-template-columns: 1fr; /* default för mobil */
+    grid-template-rows: auto auto 1fr auto; /* nav, header, content, footer */
+    grid-template-areas:
+        "nav"
+        "hd"
+        "mn"
+        "ft";
+}
+
+
+/* MAIN sida 2 */
+.main2 {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main2 img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* ASIDE sida 2 */
+.aside3 {
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 15px;
+    color: #e2e8f0;
+}
+
+.aside3 h3 {
+    margin-top: 0;
+}
+
+.aside3 ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+/* RESPONSIVT FÖR STORA SKÄRMAR */
+@media (min-width: 900px) {
+    .grid2 {
+        grid-template-columns: 75% 1fr;
+        grid-template-rows: 10vh auto 1fr auto; 
+        grid-template-areas:
+            "nav nav"
+            "hd hd"
+            "mn as"
+            "mn as"
+            "ft ft";
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .grid2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 180px auto auto 100px; 
+        grid-template-areas:
+            "nav"
+            "hd"
+            "mn"
+            "as"
+            "ft";
     }
 }

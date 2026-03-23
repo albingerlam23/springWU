@@ -111,7 +111,7 @@ header p {
     max-width: 700px;     
 }
 
-/* MAIN */
+/* MAIN sida 1 */
 
 .main1 {
     grid-area: mn;
@@ -150,7 +150,7 @@ header p {
     z-index: 2;
 }
 
-/* ASIDES */
+/* ASIDES sida 1 */
 
 #as1.aside1,
 #as2.aside2 {
@@ -167,7 +167,7 @@ header p {
     display: block;
 }
 
-/* SECTION */
+/* SECTION sida 1 */
 
 .sc1 {
     grid-area: sc;
@@ -248,7 +248,7 @@ footer {
     transform: scale(1.2);
 }
 
-/* RESPONSIVT */
+/* RESPONSIVT Sida 1 */
 
 @media (min-width: 900px) {
     .grid1 {
@@ -383,8 +383,8 @@ footer {
     gap: 12px;
     padding: 12px;
     min-height: 100vh;
-    grid-template-columns: 1fr; /* default för mobil */
-    grid-template-rows: auto auto 1fr auto; /* nav, header, content, footer */
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto 1fr auto; 
     grid-template-areas:
         "nav"
         "hd"
@@ -403,11 +403,25 @@ footer {
     gap: 15px;
 }
 
-.main2 img {
-    width: 100%;
-    border-radius: 12px;
-    object-fit: cover;
+
+.track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
+
+.track .text {
+    flex: 1;
+}
+
+.track img {
+    width: 60%;
+    max-width: 400px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
 
 /* ASIDE sida 2 */
 .aside3 {
@@ -431,7 +445,7 @@ footer {
 @media (min-width: 900px) {
     .grid2 {
         grid-template-columns: 75% 1fr;
-        grid-template-rows: 10vh auto 1fr auto; 
+        grid-template-rows: 10vh 17vh auto auto 18vh; 
         grid-template-areas:
             "nav nav"
             "hd hd"
@@ -449,12 +463,19 @@ footer {
 @media (max-width: 500px) {
     .grid2 {
         grid-template-columns: 1fr;
-        grid-template-rows: 80px 180px auto auto 100px; 
+        grid-template-rows: 80px 150px auto auto 100px; 
         grid-template-areas:
             "nav"
             "hd"
             "mn"
             "as"
             "ft";
+    }
+    .track {
+        flex-direction: column;
+    }
+    
+    .track img {
+        width: 80%;
     }
 }

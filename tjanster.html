@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Göteborgs Gokartcenter AB</title>
+  <title>Tjänster - Göteborgs Gokartcenter</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,66 +13,64 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<div class="grid1">
+    <div class="grid3">
 
   <nav>
     <h1>Göteborgs Gokartcenter</h1>
 
-    <button 
-      class="hamburger" 
-      id="hamburger"
-      aria-label="Öppna meny"
-      aria-expanded="false"
-      aria-controls="nav-links">
-      &#9776;
-    </button>
+    <button class="hamburger" id="hamburger">&#9776;</button>
 
-    <nav class="nav-links" id="nav-links" hidden>
-      <a href="http://192.168.193.230:5500/startsida.html#">Hem</a>
-      <a href="http://192.168.193.230:5500/banor.html#">Banor</a>
-      <a href="#">Tjänster</a>
-      <a href="#">Boka</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="startsida.html">Hem</a>
+      <a href="banor.html">Banor</a>
+      <a href="tjanster.html">Tjänster</a>
+      <a href="boka.html">Boka</a>
     </nav>
-
   </nav>
 
   <header>
-    <h1>Upplev fart och spänning!</h1>
-    <p>Göteborgs bästa gokartcenter – för hela familjen och vänner.</p>
+    <h1>Våra tjänster</h1>
+    <p>Välj en upplevelse som passar dig – från drop-in till event.</p>
   </header>
 
-  <main class="main1">
-    <h2>Välkommen till banan!</h2>
-    <p>Känn adrenalinet när du kör våra kurviga banor och utmana dina vänner i fartfyllda lopp.</p>
+  <main class="main3">
+
+    <div class="tjänster">
+
+      <div class="tjänst-kort">
+        <h3>Drop-in körning</h3>
+        <p>Kör några snabba heat utan bokning. Perfekt för spontan racing.</p>
+        <div class="pris">179 kr / 10 min </div>
+        <button>Boka</button>
+      </div>
+
+      <div class="tjänst-kort">
+        <h3>Gruppbokning</h3>
+        <p>Perfekt för kompisgäng eller familj. Tävla mot varandra!</p>
+        <div class="pris">Från 999 kr</div>
+        <button>Boka</button>
+      </div>
+
+      <div class="tjänst-kort">
+        <h3>Företagsevent</h3>
+        <p>Teambuilding med fart och tävling. Vi fixar allt!</p>
+        <div class="pris">Kontakta oss</div>
+        <button>Boka</button>
+      </div>
+
+    </div>
+
   </main>
-
-  <aside id="as1" class="aside1">
-    <p class="aside-text">Vi har en utomhusbana...</p>
-    <img src="img/MBJ_1437-Foto-Marcus-Bjarneroth-scaled.jpg" alt="Gokart på banan">
-  </aside>
-
-  <aside id="as2" class="aside2">
-    <p class="aside-text">Men också en inomhusbana!</p>
-    <img src="img/412e063b445e3b7545e087cc300205d4.jpg" alt="Gokart racing">
-  </aside>
-
-  <section class="sc1">
-    <h2>Om oss</h2>
-    <p>
-      Vi erbjuder gokartupplevelser för både nybörjare och erfarna förare.
-      Säkerhet, spänning och roliga minnen är alltid i fokus.
-    </p>
-    <img src="img/gokart_ps.png" alt="Gokartbana i Göteborg">
-  </section>
 
   <footer>
     <div class="footer-center">
     <h2>Öppettider</h2>
     <p>
-      Måndag - Torsdag: 10-18 <br>
-      Fredag - Lördag: 10-20 <br>
-      Söndag: Stängt
+      Tisdag - Torsdag: 10-18 
+      <br>
+      Fredag - Stängt: 10-20 
+      <br>
+      Måndag: Stängt
     </p>
     </div>
 
@@ -99,11 +97,9 @@
         Email: goteborgsgokartcenter.se
       </p>
     </div>
-
   </footer>
 
 </div>
-
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,11 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boka - Göteborgs Gokartcenter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boka hos oss - Göteborgs Gokartcenter</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+
+<div class="grid4">
+
+    <nav>
+    <h1>Göteborgs Gokartcenter</h1>
+
+    <button class="hamburger" id="hamburger">&#9776;</button>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="http://192.168.68.78:5500/startsida.html">Hem</a>
+      <a href="http://192.168.68.78:5500/banor.html">Banor</a>
+      <a href="http://192.168.68.78:5500/tjanster.html">Tjänster</a>
+      <a href="http://192.168.68.78:5500/boka.html">Boka</a>
+    </nav>
+  </nav>
+
+
+  <header>
+    <h1>Boka din körning</h1>
+    <p>Fyll i formuläret nedan för att boka din upplevelse</p>
+  </header>
+
+  <main class="main4">
+
+    <form class="payment-form">
+
+      <h2>Bokningsinformation</h2>
+
+      <label>Välj tjänst</label>
+      <select required>
+        <option value=""> Välj </option>
+        <option>Drop-in körning</option>
+        <option>Gruppbokning</option>
+        <option>Företagsevent</option>
+      </select>
+
+      <label>Antal personer</label>
+      <input type="number" min="1" max="20" required>
+
+      <label>Datum</label>
+      <input type="date" required>
+
+      <label>Tid</label>
+      <input type="time" required>
+
+      <h2>Dina uppgifter</h2>
+
+      <label>Förnamn</label>
+      <input type="text" required>
+
+      <label>Efternamn</label>
+      <input type="text" required>
+
+      <label>Email</label>
+      <input type="email" required>
+
+      <label>Telefonnummer</label>
+      <input type="tel" required>
+
+      <h2>Betalning</h2>
+
+      <label>Kortnummer</label>
+      <input type="text" placeholder="1234 5678 9012 3456" required>
+
+      <div class="row">
+        <div>
+          <label>Utgångsdatum</label>
+          <input type="text" placeholder="MM/ÅÅ" required>
+        </div>
+
+        <div>
+          <label>CVC</label>
+          <br> 
+          <input type="text" placeholder="123" required>
+        </div>
+      </div>
+
+      <button type="submit">Slutför bokning</button>
+
+    </form>
+
+  </main>
+
+ 
+  <footer>
+    <div class="footer-left">
+    <h2>Öppettider</h2>
+    <p>
+      Tis - Tors: 10-18 
+      <br>
+      Fre - Sön: 10-20 
+      <br>
+      Mån: Stängt
+    </p>
+    </div>
+
+    <div class="footer-center">
+      <h2>Följ oss!</h2>
+      <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src="img/facebook-logo.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="img/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/" target="_blank">
+          <img src="img/twitter.png" alt="X">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <h2>Kontakta oss</h2>
+      <p>
+        Telefon: 031-123 45 67 
+        <br>
+        Email:
+        <br>
+         gbg@gokartcenter.se
+      </p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
  /* GLOBALT */ 
 
+
 * {
     box-sizing: border-box;
 }
@@ -265,7 +266,6 @@ footer {
     display: flex;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap-reverse;
     margin: 0; 
 }
 
@@ -409,6 +409,7 @@ footer {
 }
 
 
+/* GRID sida 2 */
 
 .grid2 {
     display: grid;
@@ -511,6 +512,10 @@ footer {
         width: 80%;
     }
 }
+
+
+
+
 
 /* GRID sida 3 */
 
@@ -650,5 +655,171 @@ footer {
 
     .service-card {
         width: 90%;
+    }
+}
+
+
+
+
+
+
+/* GRID 4 – BOKNINGSSIDA */
+
+.grid4 {
+    display: grid;
+    gap: 12px;
+    padding: 12px;
+    min-height: 100vh;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 17vh 1fr 18vh;
+
+    grid-template-areas:
+        "nav"
+        "hd"
+        "mn"
+        "ft";
+}
+
+/* Main */
+
+
+.main4 {
+    grid-area: mn;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Formulär */
+
+.payment-form {
+    background: rgba(15, 23, 42, 0.8);
+
+    padding: 25px;
+    border-radius: 15px;
+
+    width: 100%;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Rubriker i formuläret */
+
+.payment-form h2 {
+    margin-top: 10px;
+}
+
+/* Labels */
+
+.payment-form label {
+    font-size: 1.0rem;
+    color: white;
+
+}
+
+/* Inputs + select */
+
+.payment-form input,
+.payment-form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    
+    background: #1e293b;
+    color: white;
+    
+}
+
+/* Placeholder */
+
+.payment-form input::placeholder {
+    color: #b1b6be;
+}
+
+/* Fokus (grön outline) */
+
+.payment-form input:focus,
+.payment-form select:focus {
+    outline: 2px solid #16a34a;
+}
+
+/* Knapp */
+
+.payment-form button {
+    margin-top: 15px; 
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #16a34a;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.payment-form button:hover {
+    background: #15803d;
+}
+
+
+/* Rad (datum, CVC etc) */
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row div {
+    flex: 1;
+}
+
+ /* Responsivt*/
+ @media (min-width: 900px) {
+    .grid4 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 17vh 1fr 18vh;
+
+        grid-template-areas:
+            "nav"
+            "hd"
+            "mn"
+            "ft";
+    }
+}
+
+@media (max-width: 500px) {
+    .grid4 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 17vh 1fr 23vh;
+
+        grid-template-areas:
+            "nav"
+            "hd"
+            "mn"
+            "ft";
+    }
+
+    .main4 {
+        padding: 20px;
+    }
+
+    .payment-form {
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
     }
 }

@@ -23,7 +23,7 @@ h1, h2, h3 {
 
 nav {
     grid-area: nav;
-    background: linear-gradient(90deg, #16a34a, #065f46);
+    background: linear-gradient(90deg, #15803d, #064e3b); 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,7 +67,7 @@ nav h1 {
 
 header {
     grid-area: hd;
-    background: linear-gradient(135deg, #16a34a, #0f766e);
+    background: linear-gradient(135deg, #15803d, #0c6155); 
     border-radius: 14px;
     display: flex;
     flex-direction: column;
@@ -97,7 +97,7 @@ header p {
 
 footer {
     grid-area: ft;
-    background: #1f9767;
+    background: #166534; 
     border-radius: 5px;
     padding: 20px 30px;
     display: flex;
@@ -153,6 +153,7 @@ footer {
 .social-links img {
     width: 34px;
     transition: transform 0.3s;
+    filter: invert(1);
 }
 
 .social-links img:hover {
@@ -316,7 +317,7 @@ footer {
         position: absolute;
         top: 100%;
         right: 12px;
-        background: linear-gradient(135deg, #16a34a, #0f766e);
+        background: linear-gradient(135deg, #15803d, #0c6155);
         width: 210px;
         padding: 15px;
         border-radius: 10px;
@@ -563,7 +564,7 @@ footer {
     margin-bottom: 10px;
 }
 
-.tjänst-kort h3 {
+.tjänst-kort h2 {
     margin: 10px 0 5px;
 }
 
@@ -581,7 +582,7 @@ footer {
     margin-top: 10px;
     padding: 10px;
     border-radius: 8px;
-    background: #16a34a;
+    background: #15803d; 
     color: white;
     text-align: center;
     text-decoration: none;
@@ -589,7 +590,7 @@ footer {
 }
 
 .boka-knapp:hover {
-    background: #15803d;
+    background: #14532d; 
 }
 
 /* Responsivt – stor skärm */
@@ -684,7 +685,7 @@ footer {
 
 .payment-form input:focus,
 .payment-form select:focus {
-    outline: 2px solid #16a34a;
+    outline: 2px solid #15803d; 
 }
 
 .payment-form input[type="date"],
@@ -697,7 +698,7 @@ footer {
     padding: 12px;
     border: none;
     border-radius: 10px;
-    background: #16a34a;
+    background: #15803d;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -705,7 +706,7 @@ footer {
 }
 
 .payment-form button:hover {
-    background: #15803d;
+    background: #14532d; 
 }
 
 .form-row {

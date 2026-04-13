@@ -13,12 +13,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="grid3">
+
+  <div class="grid3">
 
   <nav>
     <h1>Göteborgs Gokartcenter</h1>
 
-    <button class="hamburger" id="hamburger">&#9776;</button>
+  <button 
+    class="hamburger" 
+    id="hamburger"
+    aria-label="Öppna meny"
+    aria-expanded="false"
+    aria-controls="nav-links">
+    &#9776;
+  </button>
 
     <nav class="nav-links" id="nav-links">
       <a href="http://192.168.193.230:5500/startsida.html">Hem</a>
